@@ -496,14 +496,6 @@ MonoBehaviour:
   wallJumpForce: 8
   cameraTransform: {fileID: 1211885435}
   landParticles: {fileID: 0}
-  controller: {fileID: 0}
-  movement: {x: 0, y: 0, z: 0}
-  currentSpeed: 0
-  jumpVelocity: 0
-  lastGroundedTime: 0
-  jumpBufferCounter: 0
-  isJumping: 0
-  isWallJumping: 0
 --- !u!143 &1712926262
 CharacterController:
   m_ObjectHideFlags: 0
