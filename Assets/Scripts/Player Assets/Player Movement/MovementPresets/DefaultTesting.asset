@@ -26,7 +26,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   thirdPersonMinDistance: 0.2
-  enableCameraTilt: 1
+  enableCameraTilt: 0
   allowCameraTiltIn3rdPerson: 0
   tiltAngle: 25
   tiltShiftAmount: 0.3
@@ -103,14 +103,14 @@ MonoBehaviour:
   canDoubleJump: 1
   maxDoubleJumps: 2
   doubleJumpForce: 5
-  resetDoubleJumpOnWallJump: 1
+  resetDoubleJumpOnWallJump: 0
   doubleJumpResetOnDash: 0
-  airControlFactor: 0.35
+  airControlFactor: 1
   minAirTime: 0.2
   canWallJump: 1
   wallJumpForce: 5
   wallJumpDirectionMultiplier: 1
-  canWallSlide: 1
+  canWallSlide: 0
   wallSlideSpeed: 0.65
   canDash: 1
   dashSpeed: 40
@@ -122,8 +122,8 @@ MonoBehaviour:
   onlyForwardDash: 0
   resetDashOnWallJump: 1
   dashResetOnDoubleJump: 0
-  canClimb: 1
-  requireClimbableTag: 1
+  canClimb: 0
+  requireClimbableTag: 0
   canLurch: 1
   upClimbSpeed: 4
   horizontalAndDownSpeed: 2
