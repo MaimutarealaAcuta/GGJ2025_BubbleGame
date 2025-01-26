@@ -47,6 +47,11 @@ public class PlayerStateManager : MonoBehaviour
         {
             TogglePause();
         }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            RespawnPlayer();
+        }
     }
 
     public void SetPlayerState(PlayerState newState)
@@ -65,6 +70,7 @@ public class PlayerStateManager : MonoBehaviour
 
             case PlayerState.Death:
                 GUIScript.ToggleDeathPanel();
+                bgmMixer?.SetFloat(lowpassParameter, pausedCutoffFrequency);
                 Time.timeScale = 0f;
                 break;
         }

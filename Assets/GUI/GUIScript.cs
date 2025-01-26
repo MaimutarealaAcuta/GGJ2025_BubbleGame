@@ -46,6 +46,24 @@ public class GUIScript : MonoBehaviour
             PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);
     }
 
+    public void Resume()
+    {
+        pausedPanel.SetActive(false);
+        PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void Retry()
+    {
+        deathPanel.SetActive(false);
+        PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public void Quit()
     {
         PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);

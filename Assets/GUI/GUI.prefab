@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1366473706213358628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7344034643735863605}
         m_TargetAssemblyTypeName: GUIScript, Assembly-CSharp
-        m_MethodName: PopBubble
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -786,7 +786,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7344034643735863605}
         m_TargetAssemblyTypeName: GUIScript, Assembly-CSharp
-        m_MethodName: TogglePausedPanel
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
