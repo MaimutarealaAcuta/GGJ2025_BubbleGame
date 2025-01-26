@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Y2K/Y2K_1.unity
     guid: 97ac4eb4c978af54a9a51229783ec15d
+  - enabled: 1
+    path: Assets/Scenes/Japan/Japan_1.unity
+    guid: f01c9c43ff10184488b0bc8a9b8974aa
+  - enabled: 1
+    path: Assets/Scenes/Aero/Aero_1.unity
+    guid: 38a7106d393f0414995d89c5593b3213
   m_configObjects: {}

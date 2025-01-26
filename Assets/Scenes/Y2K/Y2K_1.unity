@@ -1458,6 +1458,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4455637032633494333, guid: 648567f9cd93b0e4c85de21734f830c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8541470612954319262, guid: 648567f9cd93b0e4c85de21734f830c3,
         type: 3}
       propertyPath: m_Name
@@ -1913,7 +1918,7 @@ MonoBehaviour:
   RespawnTime: 0
   jumpDirection: 0
   jumpForce: 10
-  NextSceneName: Y2K_2
+  NextSceneName: MainBubble
   CollectibleName: 
 --- !u!4 &1164008833 stripped
 Transform:
