@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GravityGunScript : MonoBehaviour
@@ -32,10 +33,16 @@ public class GravityGunScript : MonoBehaviour
 
     private GameObject currentBubble = null;
 
+    [SerializeField]
+    private MeshRenderer[] rendereres;
+
 
     void Start()
     {
-        GetComponent<MeshRenderer>().enabled = HasGun;
+        foreach (MeshRenderer renderer in rendereres)
+        {
+            renderer.enabled = HasGun;
+        }
     }
 
     // Update is called once per frame
