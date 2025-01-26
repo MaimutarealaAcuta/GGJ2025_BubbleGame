@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1446672636}
   - component: {fileID: 1446672635}
   - component: {fileID: 1446672634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ MonoBehaviour:
   enableCameraBreathing: 1
   enableCameraWalkingEffects: 1
   bobbingBlendSpeed: 2
-  enableCameraTilt: 1
+  enableCameraTilt: 0
   allowCameraTiltIn3rdPerson: 0
   enableFovEffects: 1
   enableThirdPersonFovEffects: 1
@@ -1347,7 +1347,7 @@ MonoBehaviour:
   toggleFlyKey: 102
   toggleGhostModeKey: 103
   enableMovement: 1
-  enableOmniMovement: 1
+  enableOmniMovement: 0
   canHeadObstructionCheck: 1
   canCrouch: 1
   canSprint: 1
@@ -1355,17 +1355,17 @@ MonoBehaviour:
   canJump: 1
   canDoubleJump: 1
   canWallJump: 1
-  canWallSlide: 1
-  canClimb: 1
+  canWallSlide: 0
+  canClimb: 0
   canLurch: 1
-  requireClimbableTag: 1
+  requireClimbableTag: 0
   canDash: 1
   dashToCamera: 0
   onlyForwardDash: 0
   canAirDash: 1
   canGroundPound: 1
   canMomentumPound: 1
-  resetDoubleJumpOnWallJump: 1
+  resetDoubleJumpOnWallJump: 0
   resetDashOnWallJump: 1
   doubleJumpResetOnDash: 0
   dashResetOnDoubleJump: 0
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   requiredSpeedFactor: 0.1
   jumpForce: 5
   doubleJumpForce: 5
-  airControlFactor: 0.35
+  airControlFactor: 1
   maxDoubleJumps: 2
   wallSlideSpeed: 0.65
   wallJumpForce: 5

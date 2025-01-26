@@ -78,7 +78,7 @@ MonoBehaviour:
   enableAutoSprint: 0
   autoSprintDelay: 4
   enableMovement: 1
-  enableOmniMovement: 1
+  enableOmniMovement: 0
   canSprint: 1
   walkSpeed: 4.5
   sprintMultiplier: 2
