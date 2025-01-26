@@ -11,7 +11,8 @@ public class BubbleTypeScript : MonoBehaviour
         Jump,
         Death,
         Portal,
-        Collectible
+        Collectible,
+        Checkpoint
     }
 
     [SerializeField]
@@ -91,6 +92,9 @@ public class BubbleTypeScript : MonoBehaviour
                     break;
                 case BubbleType.Collectible:
                     break;
+                case BubbleType.Checkpoint:
+                    Checkpoint();
+                    break;
             }
         }
         else if (collision.gameObject.tag == "Wall")
@@ -138,6 +142,16 @@ public class BubbleTypeScript : MonoBehaviour
 
         // ADD COLLECTIBLE TO INVENTORY
         // GameStateManager.Instance.SaveValue(CollectibleName, 1);
+
+        Destroy(gameObject);
+    }
+
+    void Checkpoint()
+    {
+        // SAVE CHECKPOINT POSITION
+        PlayerStateManager.Instance.SetCheckpoint(transform);
+
+        // PLAY CHECKPOINT SOUND
 
         Destroy(gameObject);
     }
