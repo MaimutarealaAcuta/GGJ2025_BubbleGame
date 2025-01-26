@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 [CustomEditor(typeof(BubbleTypeScript))]
 public class BubbleTypeCustomEditor : Editor
@@ -35,6 +37,12 @@ public class BubbleTypeCustomEditor : Editor
             case BubbleTypeScript.BubbleType.Collectible:
                 bubbleTypeScript.CollectibleName = EditorGUILayout.TextField("Collectible Name", bubbleTypeScript.CollectibleName);
                 break;
+        }
+
+        if(GUI.changed)
+        {
+            EditorUtility.SetDirty(bubbleTypeScript);
+            EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
         }
     }
 }
