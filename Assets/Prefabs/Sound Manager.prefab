@@ -314,5 +314,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c00c3308dcd7ca746accdba059876c33, type: 3}
   - key: bg_y2k
     clip: {fileID: 8300000, guid: cfb4162e3a794f94a9cda448f0a430bb, type: 3}
+  - key: bubble_pop
+    clip: {fileID: 8300000, guid: 1c9da69cecaf9f14d9750fa041dce8f4, type: 3}
   bgmVolume: 1
   sfxVolume: 1

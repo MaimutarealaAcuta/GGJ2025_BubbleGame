@@ -41,6 +41,8 @@ public class PlayerStateManager : MonoBehaviour
 
     private void Update()
     {
+        if(GUIScript == null) GUIScript = FindObjectOfType<GUIScript>();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -58,6 +60,7 @@ public class PlayerStateManager : MonoBehaviour
 
             case PlayerState.Paused:
                 PauseGame();
+                GUIScript.TogglePausedPanel();
                 break;
 
             case PlayerState.Death:
@@ -73,8 +76,6 @@ public class PlayerStateManager : MonoBehaviour
 
         bgmMixer?.SetFloat(lowpassParameter, pausedCutoffFrequency);
 
-        GUIScript.TogglePausedPanel();
-
         Debug.Log("Game Paused");
     }
 
@@ -82,9 +83,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        bgmMixer.SetFloat(lowpassParameter, defaultCutoffFrequency);
-
-        GUIScript.TogglePausedPanel();
+        bgmMixer.SetFloat(lowpassParameter, defaultCutoffFrequency);        
 
         Debug.Log("Game Resumed");
     }
@@ -93,7 +92,6 @@ public class PlayerStateManager : MonoBehaviour
     {
         if (currentCheckpoint != null)
         {
-            GUIScript.ToggleDeathPanel();
             playerTransform.position = currentCheckpoint;
             Debug.Log("Player respawned at last checkpoint.");
             SetPlayerState(PlayerState.Playing);

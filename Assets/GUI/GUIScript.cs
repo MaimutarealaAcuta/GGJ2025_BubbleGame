@@ -31,6 +31,9 @@ public class GUIScript : MonoBehaviour
         pausedPanel.SetActive(!pausedPanel.activeSelf);
         Cursor.lockState = pausedPanel.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = pausedPanel.activeSelf;
+
+        if (!pausedPanel.activeSelf)
+            PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);
     }
 
     public void ToggleDeathPanel()
@@ -38,10 +41,19 @@ public class GUIScript : MonoBehaviour
         deathPanel.SetActive(!deathPanel.activeSelf);
         Cursor.lockState = deathPanel.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = deathPanel.activeSelf;
+
+        if (!deathPanel.activeSelf)
+            PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);
     }
 
     public void Quit()
     {
+        PlayerStateManager.Instance.SetPlayerState(PlayerStateManager.PlayerState.Playing);
         SceneManager.LoadScene(FallbackSceneName);
+    }
+
+    public void PopBubble()
+    {
+        FindObjectOfType<SoundManager>().PlaySFX("bubble_pop");
     }
 }
