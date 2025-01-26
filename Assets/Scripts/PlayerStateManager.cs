@@ -19,11 +19,9 @@ public class PlayerStateManager : MonoBehaviour
     private Vector3 initialSpawnPosition;
     private Vector3 currentCheckpoint;
 
-    #region UI Events
-    public Action pauseHandler;
-    public Action resumeHandler;
+    [SerializeField]
+    private GUIScript GUIScript;
 
-    #endregion
     private void Awake()
     {
         if (Instance == null)
@@ -63,7 +61,8 @@ public class PlayerStateManager : MonoBehaviour
                 break;
 
             case PlayerState.Death:
-                RespawnPlayer();
+                GUIScript.ToggleDeathPanel();
+                Time.timeScale = 0f;
                 break;
         }
     }
@@ -74,9 +73,9 @@ public class PlayerStateManager : MonoBehaviour
 
         bgmMixer?.SetFloat(lowpassParameter, pausedCutoffFrequency);
 
-        Debug.Log("Game Paused");
+        GUIScript.TogglePausedPanel();
 
-        pauseHandler?.Invoke();
+        Debug.Log("Game Paused");
     }
 
     private void ResumeGame()
@@ -85,13 +84,16 @@ public class PlayerStateManager : MonoBehaviour
 
         bgmMixer.SetFloat(lowpassParameter, defaultCutoffFrequency);
 
+        GUIScript.TogglePausedPanel();
+
         Debug.Log("Game Resumed");
     }
 
-    private void RespawnPlayer()
+    public void RespawnPlayer()
     {
         if (currentCheckpoint != null)
         {
+            GUIScript.ToggleDeathPanel();
             playerTransform.position = currentCheckpoint;
             Debug.Log("Player respawned at last checkpoint.");
             SetPlayerState(PlayerState.Playing);
