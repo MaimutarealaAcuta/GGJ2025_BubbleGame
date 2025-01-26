@@ -100,7 +100,7 @@ MonoBehaviour:
   requiredSpeedFactor: 0.1
   canJump: 1
   jumpForce: 5
-  canDoubleJump: 1
+  canDoubleJump: 0
   maxDoubleJumps: 2
   doubleJumpForce: 5
   resetDoubleJumpOnWallJump: 0

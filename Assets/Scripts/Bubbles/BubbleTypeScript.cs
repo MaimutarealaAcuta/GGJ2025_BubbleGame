@@ -45,7 +45,7 @@ public class BubbleTypeScript : MonoBehaviour
     internal JumpDirection jumpDirection = JumpDirection.FixedDirection;
 
     [SerializeField]
-    internal float jumpForce = 10f;
+    internal float jumpForce;
     #endregion
 
 
