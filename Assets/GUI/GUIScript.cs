@@ -62,6 +62,8 @@ public class GUIScript : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        PlayerStateManager.Instance.RespawnPlayer();
     }
 
     public void Quit()

@@ -6108,6 +6108,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97283991194543812, guid: 648567f9cd93b0e4c85de21734f830c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740623814289097850, guid: 648567f9cd93b0e4c85de21734f830c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888800208405560352, guid: 648567f9cd93b0e4c85de21734f830c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1571111182}
+    - target: {fileID: 1888800208405560352, guid: 648567f9cd93b0e4c85de21734f830c3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RespawnPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 3982374886580907940, guid: 648567f9cd93b0e4c85de21734f830c3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9910,6 +9930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sound Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629710153757519936, guid: eda55fa3ee77b3c4192834399449a4ba,
+        type: 3}
+      propertyPath: bgmVolume
+      value: 0.619
       objectReference: {fileID: 0}
     - target: {fileID: 4152275408971880700, guid: eda55fa3ee77b3c4192834399449a4ba,
         type: 3}
@@ -15554,6 +15579,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bb07b234b37c444798c7eeb25200d4f, type: 3}
+--- !u!114 &1571111182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3776217712246578412, guid: 8bb07b234b37c444798c7eeb25200d4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1571111181}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86392a37bd059f34cb2d318d8f58a3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1577948360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2f5e7e370f8fc0d43897abb1a136c993,

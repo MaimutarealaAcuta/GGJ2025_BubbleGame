@@ -39,9 +39,19 @@ public class PlayerStateManager : MonoBehaviour
         currentCheckpoint = initialSpawnPosition;
     }
 
+    private void Start()
+    {
+    }
+
     private void Update()
     {
         if(GUIScript == null) GUIScript = FindObjectOfType<GUIScript>();
+
+
+        if (playerTransform == null)
+        {
+            playerTransform = FindObjectOfType<PlayerMovement>().transform;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
